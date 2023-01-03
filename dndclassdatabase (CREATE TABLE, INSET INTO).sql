@@ -30,7 +30,31 @@ INSERT INTO classes VALUES (11, "Sorcerer", 6, "Charisma");
 INSERT INTO classes VALUES (12, "Warlock", 8, "Charisma");
 INSERT INTO classes VALUES (13, "Wizard", 6, "Intelligence");
 
-Select * 
-From classes
-WHERE hit_die>6
-ORDER BY class;
+
+/** an alternate way to insert values **/
+
+INSERT INTO classes (id, class, hit_die, primary_ability)
+VALUES
+  (1, "Artificer", 8, "Intelligence"),
+  (2, "Barbarian", 12, "Strength"),
+  (3, "Bard", 8, "Charisma"),
+  (4, "Cleric", 8, "Wisdom"),
+  (5, "Druid", 8, "Wisdom"),
+  (6, "Fighter", 10, "Strength or Dexterity"),
+  (7, "Monk", 8, "Dexterity & Wisdom"),
+  (8, "Paladin", 10, "Strength & Charisma"),
+  (9, "Ranger", 10, "Dexterity & Wisdom"),
+  (10, "Rogue", 8, "Dexterity"),
+  (11, "Sorcerer", 6, "Charisma"),
+  (12, "Warlock", 8, "Charisma"),
+  (13, "Wizard", 6, "Intelligence");
+  
+Select 
+  * 
+From 
+  classes
+WHERE 
+  hit_die>6
+ORDER BY 
+  class;
+  
